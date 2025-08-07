@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>raghavi is a girl</div>
+    <p>this</p>
+    <script>
+        // function claculate_total_slary(name, age, salary, bonus) {
+        //     this.name = name
+        //     this.age = age
+        //     this.salary = salary
+        //     this.bonus = bonus
+        //     this.totalSalary = salary + bonus
+        // }
+
+        // let employe = {
+        //     name: null,
+        //     age: null,
+        //     salary: null,
+        //     bonus: null,
+        //     totalSalary: null,
+        //     solve: claculate_total_slary
+        // }
+        // employe.solve('raghav', 34, 400, 20,)
+        // console.log(employe)
+
+        // let employe2 = {
+        //     name: null,
+        //     age: null,
+        //     salary: null,
+        //     bonus: null,
+        //     totalSalary: null,
+        //     solve: claculate_total_slary
+        // }
+
+        // employe2.solve('raghavi', 16, 20, 30,)
+        // console.log(employe2)
+
+        // let ele = document.getElementsByTagName('p')
+        let element = document.getElementsByTagName('div')
+        // let time = 0
+
+        // const res = setInterval(() => {
+        //     ele[0].innerHTML = time++
+        // }, 1000);
+
+        // setTimeout(() => {
+        //     clearInterval(res)
+        // }, 10000);
+
+        let a = +prompt('enter number in milisecond')
+
+        while (Number.isNaN(a)) {
+            alert('please enter a valid number');
+            a = +prompt('enter number in milisecond')
+        }
+        if(!Number.isNaN(a)){
+            let time = 0;
+        setTimeout(() => {
+            element[0].style.display = 'none'
+        }, a);
+    }
+
+        // setTimeout(() => {
+        //     element[0].style.display = 'block'
+        // }, 1200);
+
+
+    </script>
+</body>
+
+</html>

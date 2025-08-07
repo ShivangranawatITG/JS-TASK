@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Q-3 Create 3 student objects with these properties: 
+        // name, marks1, marks2, marks3
+        // - find the average marks of each students by calculating their total marks 
+        // then store the average marks of each students in array - called student-marks
+
+
+        const kuldeep = {
+            name: "kuldeep",
+            marks1: 20,
+            marks2: 10,
+            marks3: 25
+        }
+        const raghav = {
+            name: "raghav",
+            marks1: 5,
+            marks2: 8,
+            marks3: 7
+        }
+        const harry = {
+            name: "harry",
+            marks1: 20,
+            marks2: 40,
+            marks3: 50
+        }
+        let kuldeep_average_marks = (kuldeep.marks1 + kuldeep.marks2 + kuldeep.marks3) / 3
+        console.log('kuldeep average marks :', kuldeep_average_marks)
+
+        let raghav_average_marks = (raghav.marks1 + raghav.marks2 + raghav.marks3) / 3
+        console.log('raghav average marks :', raghav_average_marks)
+
+        let harry_average_marks = (harry.marks1 + harry.marks2 + harry.marks3) / 3
+        console.log('harry average marks :', harry_average_marks)
+
+        const students_marks = [kuldeep_average_marks, raghav_average_marks, harry_average_marks]
+
+
+    </script>
+</body>
+
+</html>

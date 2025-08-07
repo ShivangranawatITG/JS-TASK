@@ -1,0 +1,6 @@
+const myname = "shivang";
+console.log(myname);
+let age = 19;
+console.log(age);
+let myclass = '1st year';
+console.log(myclass);

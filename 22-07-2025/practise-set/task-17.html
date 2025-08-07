@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 17. Get names of users over 20
+        // Users jinki age 20 se zyada ho unka naam return karo.
+        // Input: [{ name: 'A', age: 20 }, { name: 'B', age: 25 }] => Output: ['B']
+
+        let arr = [{ name: 'A', age: 20 }, { name: 'B', age: 25 }]
+
+        let res = arr.map((value) => {
+            if(value.age > 20){
+                return value.name
+            }
+        })
+
+        console.log(res)
+
+    </script>
+</body>
+
+</html>

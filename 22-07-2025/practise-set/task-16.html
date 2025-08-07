@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 16. Get doubled even numbers
+        // Pehle even numbers filter karo, fir unko double karo using map.
+        // Input: [1, 2, 3, 4] => Output: [4, 8]
+
+        let arr = [2,4,6,8,9,3,4,6,8,2]
+
+        let res = arr.filter((value) => {
+            if(value % 2 == 0){
+                return true;
+            }
+            else{
+                return false;
+            }
+        })
+
+        console.log(res)
+
+        let result = res.map((value) => {
+            return value*2;
+        })
+
+        console.log(result)
+
+    </script>
+</body>
+
+</html>

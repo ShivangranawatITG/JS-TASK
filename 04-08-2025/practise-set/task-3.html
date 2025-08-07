@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img class="image" src="" alt="" height="100%" width="100%">
+    </div>
+    <img class="img" onclick="change_image(0)"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Bugatti_Divo%2C_GIMS_2019%2C_Le_Grand-Saconnex_%28GIMS0029%29.jpg/960px-Bugatti_Divo%2C_GIMS_2019%2C_Le_Grand-Saconnex_%28GIMS0029%29.jpg"
+        width="400px" alt="">
+    <img class="img" onclick="change_image(1)"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjhf0JLDr6eYixcpJuqA1nhGmjzv3tkCxpow&s" width="300px"
+        alt="">
+    <img class="img" onclick="change_image(2)"
+        src="https://news.dupontregistry.com/wp-content/uploads/2024/10/01-BUGATTI-Chantilly-1140x570.jpg" width="400px"
+        alt="">
+    <script>
+        // Ek image gallery banao jisme 3 thumbnails already ho. Jab user kisi thumbnail par click kare,
+        //  toh upar ek bada image dikhaye (thumbnail ke image URL se).
+
+        let element = document.getElementsByClassName('img')
+        let ele = document.querySelector('.image')
+        function change_image(x) {
+            ele.src = element[x].src
+        }
+
+
+    </script>
+</body>
+
+</html>

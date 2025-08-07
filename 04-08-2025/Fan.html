@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <img class="img" src="https://mobileimages.lowes.com/productimages/0ade3f9d-0f47-44c4-8311-d0215b0ad151/LP6834LBL-spin_thumbnail.jpg" alt="bike" width="750px" height="550px">
+    <button onclick="path_change()">Click me</button>
+    <script>
+
+         let element = document.querySelector('.img')
+         let off = 'https://mobileimages.lowes.com/productimages/0ade3f9d-0f47-44c4-8311-d0215b0ad151/LP6834LBL-spin_thumbnail.jpg'
+         let on = 'https://fanimation.com/wp-content/uploads/2023/01/LP6834LBL_spin.gif'
+        function path_change() {
+            if (element.src == off) {
+                element.src = on;
+            }
+            else {
+                element.src = off                
+            }
+        }
+    </script>
+</body>
+</html>

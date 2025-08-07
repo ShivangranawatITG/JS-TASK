@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height : 400px;
+            width : 400px;
+            background-color: blueviolet;
+            color: aqua;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h1>Raghavi</h1>
+    </div>
+    <button id="button" onclick="mode()">Change me</button>
+    <script>
+        //         7. Button se Background Color Change Karna
+        // Description: getElementById() se ek button find karo aur uske click par ek div ka background color change karne ke liye event listener add karo.
+
+        let a = document.getElementById('button')
+        let b = document.querySelector('.content')
+        function color_change(){
+            let min = 0;
+            let max = 255;
+            let random = Math.random();
+            let result = Math.floor(random*(max-min)+min)
+            return result;
+        }
+
+        function mode(){
+            let f1 = color_change()
+            let f2 = color_change()
+            let f3 = color_change()
+            b.style.color = `rgb(${f1},${f2},${f3})`
+            b.style.background = `rgb(${f1},${f2},${f3})`
+        }
+
+    </script>
+</body>
+
+</html>

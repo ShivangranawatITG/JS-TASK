@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function getIndex(min, max) {
+        //     let randomvalue = Math.random()
+        //     return Math.floor(randomvalue * (max - min)) + min
+        // }
+        // let chars = []
+        // let password = '';
+        // for(let i = 97; i<=97+25; i++){
+        //     chars.push(String.fromCharCode(i))
+        // }
+        // for (let i = 0; i < 4; i++) {
+        //     let index = getIndex(97, 122);
+        //     password += String.fromCharCode(index)
+        // }
+        // console.log(password)
+
+
+
+
+        function getIndex(min, max) {
+            let randomvalue = Math.random()
+            return Math.floor(randomvalue * (max - min)) + min
+        }
+        let password = '';
+        for (let i = 0; i < 4; i++) {
+            let index = getIndex(30, 90);
+            password += String.fromCharCode(index)
+        }
+        console.log(password)
+
+
+    </script>
+</body>
+
+</html>

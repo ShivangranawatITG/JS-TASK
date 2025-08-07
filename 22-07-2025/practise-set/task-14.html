@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 14. Get strings longer than 3 characters
+        // Sirf un strings ko return karo jinki length 3 se zyada ho.
+        // Input: ['hi', 'hello'] => Output: ['hello']
+
+        let arr =  ['hi', 'hello']
+
+        let res = arr.filter((value) => {
+            if(value.length > 3){
+                return true;
+            }
+            else{
+                return false;
+            }
+        })
+
+        console.log(res)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="name">it geeks</h1>
+    </div>
+    <div class="container">
+        <h1 class="name">it geeks</h1>
+    </div>
+    <div class="container">
+        <h1 class="name">it geeks</h1>
+    </div>
+    <div class="container">
+        <h1 class="name">it geeks</h1>
+    </div>
+    <script>
+        //         8. Class Wale Elements Mein Loop Lagana
+        // Description: getElementsByClassName() se sabhi elements ko loop karo jo ek specific class share karte hain aur unka background color change karo.
+
+        let element = document.getElementsByClassName('name')
+    let res = [...element]
+
+    let arr = res.forEach((value)=>{
+        value.style.background = 'red'
+    })
+    console.log(arr);
+    
+    
+       
+
+    </script>
+</body>
+
+</html>

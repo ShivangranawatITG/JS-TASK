@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="password" id="pass">
+    <span onclick="type_change()">👁️‍🗨️</span>
+    <script>
+        // Ek password input field aur ek eye icon (image ya emoji) banao. 
+        // Eye par click karne par password field type="text" 
+        // aur wapas type="password" ho jaye (toggle effect).
+
+        let element = document.getElementById('pass')
+        function type_change() {
+            if (element.type == 'password') {
+                element.type = 'text'
+            }
+            else {
+                element.type = 'password'
+            }
+        }
+
+    </script>
+</body>
+
+</html>

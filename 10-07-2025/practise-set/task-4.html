@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //         4. Iterate Object and Convert to Array
+        // Use a for-in loop to convert this object into an array of key-value strings like: "name: Rohan".
+        // const person = {
+        //   name: "Rohan",
+        //   role: "Developer",
+        //   level: "Mid"
+        // };
+
+        const person = {
+            name: "Rohan",
+            role: "Developer",
+            level: "Mid"
+        };
+
+        const arr = []
+        for (let a in person) {
+            arr.push(a + person[a]);
+        }
+        console.log(arr);
+
+
+
+
+    </script>
+</body>
+
+</html>

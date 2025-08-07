@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 15. Filter by property existence
+        // Sirf un objects ko return karo jinke paas specific property ho, jaise 'active'.
+        // Input: [{ name: 'X' }, { name: 'Y', active: true }] => Output: [{ name: 'Y', active: true }]
+
+        let arr = [{ name: 'X' }, { name: 'Y', active: true }]
+
+        let result = arr.filter((value) => {
+            if (value.active) {
+                return true;
+
+            }
+            return false;
+        });
+
+        console.log(result);
+
+    </script>
+</body>
+
+</html>

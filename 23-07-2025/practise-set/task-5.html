@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 5. Find the Maximum and Minimum Value in an Array
+        // Input: [10, 5, 8, 15, 3]
+        // Output: Max: 15, Min: 3
+
+        let arr = [54,3,2,886,66,9];
+        let minimum = Infinity;
+        let maximum = Infinity;
+        for (let i of arr) {
+            if (i < minimum) {
+                minimum = maximum;
+                maximum = i;
+            }
+            else if (i < maximum) {
+                secondmini = i;
+            }
+        }
+        console.log(minimum, maximum)
+
+    </script>
+</body>
+
+</html>

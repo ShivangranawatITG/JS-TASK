@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #2A7B9B;
+            background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+        }
+
+        #info {
+            border-radius: 999px;
+            padding: 15px 20px;
+            width: 400px;
+            border: none;
+            outline: none;
+            margin-left: 35%;
+            background: #2A7B9B;
+            background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(169, 87, 199, 1) 28%, rgba(237, 221, 83, 1) 100%);
+        }
+
+        .primary {
+            font-weight: bolder;
+            border: none;
+            margin-left: 18px;
+            width: 200px;
+            z-index: 3;
+            color: black;
+            background-color: white;
+            padding: 10px 15px;
+            border-radius: 999px;
+            background: #EEAECA;
+            background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+        }
+
+        .box2 {
+            margin-bottom: 50px;
+        }
+
+
+        .box {
+            margin-left: 45%;
+            margin-top: 100px;
+        }
+
+        .secondary {
+            font-weight: bolder;
+            border: none;
+            margin-left: 18px;
+            width: 200px;
+            z-index: 3;
+            color: black;
+            background-color: white;
+            padding: 10px 15px;
+            border-radius: 999px;
+            background: #aeeedf;
+            background: radial-gradient(circle, rgba(174, 238, 223, 1) 0%, rgba(164, 148, 233, 1) 100%);
+        }
+
+        .big {
+            margin-left: 20px;
+            width: 60px;
+            border-radius: 999px;
+            background-color: #fff;
+            cursor: pointer;
+            margin-left: 90%;
+        }
+
+        .small {
+            width: 30px;
+            height: 30px;
+            border-radius: 999px;
+            border: 1px solid black;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="big">
+        <div class="small"></div>
+    </div>
+    <input type="text" class="val" id="info" name="n">
+    <button class="secondary" onclick="copy()">PRINT</button>
+
+    <div class="box2"></div>
+    <button class="primary" onclick="upper()">CAPITAL</button>
+    <button class="primary" onclick="transform()">CAPITALIZE</button>
+    <button class="primary" onclick="lower()">SMALL</button>
+    <button class="primary" onclick="bold()">BOLD</button>
+    <button class="primary" onclick="italic()">ITALIC</button>
+    <button class="primary" onclick="color()">COLOR <input type="color" id="colour"></button>
+    <div class="box"></div>
+
+    <script>
+        let ele = document.getElementById('info')
+        let box = document.querySelector('.box')
+        let capital = document.getElementsByClassName('paragraph')
+        let x = 0;
+        let y = 0;
+        let z = 0;
+
+        function copy() {
+
+            let p = document.createElement('p')
+            let button = document.createElement('div')
+            p.setAttribute('class', 'paragraph')
+            button.innerHTML = `${info.value}<button onclick='deleted(this)'>DELETE</button`
+            button.setAttribute('class', 'secondary')
+
+            p.innerText = ele.value
+            box.appendChild(p)
+            box.appendChild(button)
+            p.style.fontSize = "60px";
+        }
+
+        function deleted(ele) {
+            ele.parentElement.remove()
+        }
+
+        function upper() {
+            if (y == 0) {
+                capital[capital.length - 1].style.textTransform = 'uppercase';
+                y++
+            }
+            else {
+                capital[capital.length - 1].style.textTransform = 'none'
+                y = 0
+            }
+        }
+
+        function transform() {
+            if (z == 0) {
+                capital[capital.length - 1].style.textTransform = 'capitalize'
+                z++
+            }
+            else {
+                capital[capital.length - 1].style.textTransform = 'none'
+                z = 0
+            }
+
+        }
+
+        function lower() {
+            if (x == 0) {
+                capital[capital.length - 1].style.textTransform = 'lowercase';
+                x++
+            }
+            else {
+                capital[capital.length - 1].style.textTransform = 'none'
+                x = 0
+            }
+
+        }
+
+        function bold() {
+            if (capital[capital.length - 1].style.fontWeight == 'normal') {
+                capital[capital.length - 1].style.fontWeight = 'bolder'
+            }
+            else {
+                capital[capital.length - 1].style.fontWeight = 'normal'
+            }
+        }
+
+        function italic() {
+            if (capital[capital.length - 1].style.fontStyle == 'normal') {
+                capital[capital.length - 1].style.fontStyle = 'italic'
+            }
+            else {
+                capital[capital.length - 1].style.fontStyle = 'normal'
+            }
+        }
+
+        function color() {
+            let col = document.getElementById("colour").value;
+            if (capital[capital.length - 1].style.color == 'black') {
+                capital[capital.length - 1].style.color = col;
+            }
+            else {
+                capital[capital.length - 1].style.color = 'black';
+            }
+        }
+    </script>
+</body>
+
+</html>

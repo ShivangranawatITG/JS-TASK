@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Q-5 Create an array called my-info which have 2 objects
+        // each object have cityname, address, roll-number
+        // then swap the value of one object with another
+
+        const my_info = [
+            {
+                cityname: "bhopal",
+                address: "5 kuldeep nagar",
+                roll_number: 2749
+            },
+            {
+                city_name: "indore",
+                address: "laxman nagar",
+                roll_number: 56795665
+            }
+        ]
+
+        let temp = my_info[0]
+        my_info[0] = my_info[1]
+        my_info[1] = temp
+        console.log(my_info[0])
+    </script>  
+</body>
+
+</html>

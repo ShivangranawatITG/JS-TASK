@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="heading">it geeks</div>
+    <div class="heading">raghavi</div>
+    <div class="heading">kuldeep</div>
+    <button onclick="">click me</button>
+    <script>
+
+        let element = document.querySelectorAll('.heading')
+
+        let a = element[0];
+        let b = element[1];
+        let c = element[2];
+        let d;
+        let e;
+
+        d = a.outerHTML
+        e = b.outerHTML
+        a.outerHTML = c.outerHTML
+        b.outerHTML = a.outerHTML
+        c.outerHTML = e.outerHTML
+
+        console.log(a, b, c)
+    </script>
+</body>
+
+</html>

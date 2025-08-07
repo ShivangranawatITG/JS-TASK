@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 12. Get users older than 18
+        // User objects mein se unko rakhna hai jinki age 18 se zyada ho.
+        // Input: [{ age: 17 }, { age: 19 }] => Output: [{ age: 19 }]
+
+        let arr = [{ age: 17 }, { age: 19 }]
+
+        let res = arr.filter((value,index) => {
+            if(value.age > 18){
+                return true;
+            }
+            else {
+                return false;
+            }
+        })
+
+        console.log(res)
+
+    </script>
+</body>
+
+</html>

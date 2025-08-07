@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#" onclick="text_change()">click here</a>
+    <script>
+        // Ek <a> tag banao jiska default href="#" ho. 
+        //     JavaScript se jab user uspe click kare, toh page scroll
+        //      na ho aur us link ka text "Link Clicked!" ban jaye.
+
+            let element = document.getElementsByTagName('a')
+            function text_change(){
+                element[0].innerHTML = 'Link Clicked!'
+            }
+
+    </script>
+</body>
+</html>

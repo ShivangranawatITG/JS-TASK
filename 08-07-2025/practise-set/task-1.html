@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //         🔶 Question 1: Movie Rating Checker
+        //  Create a movie object with title and rating (0–10).
+        //  Use if-else to print:
+        // "Excellent" if rating ≥ 9
+
+
+        // "Good" if 7–8.9
+
+
+        // "Average" if 5–6.9
+
+
+        // "Poor" if <5
+
+
+        const movie = {
+            title: "Animal",
+            rating: 10
+        }
+
+        let rating = movie.rating
+
+        if (rating >= 9) {
+            console.log("Excellent");
+
+        }
+
+        else if (rating >= 7 && rating <= 8.9) {
+            console.log("Good");
+
+        }
+
+        else if (rating >= 5 && rating <= 6.9) {
+            console.log("Average");
+
+        }
+
+        else if (rating < 5) {
+            console.log("Poor")
+        }
+    </script>
+</body>
+
+</html>

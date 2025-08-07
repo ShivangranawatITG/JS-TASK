@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        table {
+            text-align: center;
+            width: 500px;
+            height: 100px;
+        }
+
+        body {
+            display: flex;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .primary {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th class="head">1</th>
+            <th class="head">2</th>
+            <th class="head">3</th>
+        </tr>
+        <tbody>
+            <tr>
+                <td class="data">4</td>
+                <td class="data">5</td>
+                <td class="data">6</td>
+            </tr>
+            <tr>
+                <td class="data">7</td>
+                <td class="data">8</td>
+                <td class="data">9</td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <button class="primary" onclick="data_none()">DELETE</button>
+        <button class="button" onclick=" head_none ()">DELETE</button>
+        <button onclick="data_two()">DELETE</button>
+    </div>
+    <script>
+        // Ek table banao jisme 3 rows ho. Har row ke aage ek "Delete" button ho. 
+        // Jab user delete click kare, toh us row ka visibility display: none ho jaye.
+
+        let element = document.getElementsByClassName('data')
+        let ele = document.getElementsByClassName('head')
+
+        function head_none() {
+            ele[0].style.display = 'none'
+            ele[1].style.display = 'none'
+            ele[2].style.display = 'none'
+        }
+        function data_none() {
+            element[0].style.display = 'none'
+            element[1].style.display = 'none'
+            element[2].style.display = 'none'
+        }
+        function data_two() {
+            element[3].style.display = 'none'
+            element[4].style.display = 'none'
+            element[5].style.display = 'none'
+        }
+
+    </script>
+</body>
+
+</html>

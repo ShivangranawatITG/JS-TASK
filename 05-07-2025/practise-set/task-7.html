@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //         🔶 Question 7: Bill Splitter with Service Charge
+        // Create a bill object with totalAmount and numberOfPeople. If the bill is more than 500:
+        // Add a 10% service charge
+        //  Then divide and print how much each person should pay.
+
+
+        const bill = {
+            total_amount: 501,
+            number_of_people: 80
+        }
+        if (bill.total_amount > 500) {
+            let grandTotal = ((bill.total_amount * 10) / 100) + bill.total_amount
+            console.log(grandTotal)
+        }
+        else { 
+            console.log(bill.total_amount)
+        } 
+    </script>
+</body>
+
+</html>

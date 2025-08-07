@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 500px;
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" onmouseover="hover()" onmouseout="hoverOut()"></div>
+    <script>
+        // Ek box banao jiska color default gray ho. JavaScript likho 
+        // jisse jab mouse box ke upar aaye toh background color blue ho jaye,
+        //  aur mouse bahar jaaye toh wapas gray.
+
+        let element = document.querySelector('.box')
+        function hover() {
+            element.style.background = 'blue'
+        }
+        function hoverOut() {
+            element.style.background = 'gray'
+        }
+
+
+    </script>
+</body>
+
+</html>

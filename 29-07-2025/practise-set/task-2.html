@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            transition: 0.1s;
+        }
+    </style>
+</head>
+<body>
+   <!-- <div class="box"></div> -->
+
+    <p id='note'>Welcome to JavaScript</p>
+
+    <script>
+//         let ele = document.querySelector(".box");
+// const text = ele.innerHTML;
+// ele.style.width = "1350px";
+// ele.style.height = "600px";
+// ele.innerHTML = `<button onClick="changeBg()">click me</button>`
+// console.log(ele.innerHTML)
+
+// function getRandomColorValue() {
+//     let min = 0, max = 300;
+//     let val = Math.random();
+//     let randomValue = Math.floor((val * (max - min)) + min);
+//     return randomValue;
+// }
+// function changeBg() {
+//     const ele = document.querySelector(".box");
+//     let color = ele.style.background;
+//     console.log("color", color);
+//     setInterval(() => {
+//         let first = getRandomColorValue();
+//         let second = getRandomColorValue();
+//         let third = getRandomColorValue();
+//         let randomColor = `rgb(${first},${second},${third})`
+//         ele.style.background = randomColor;
+
+//     }, 1);
+// }
+
+
+
+        
+// 2. Color All Notes
+// Select all elements with class 'note' and change their text color to red.
+
+        let element = document.getElementById('note')
+        element.style.color = 'red'
+        console.log(element)
+
+    </script>
+</body>
+</html>

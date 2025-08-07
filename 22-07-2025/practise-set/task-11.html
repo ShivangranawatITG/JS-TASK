@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 11. Filter out odd numbers
+        // Sirf even numbers ko rakhna hai aur odd numbers ko hata do.
+        // Input: [1, 2, 3, 4] => Output: [2, 4]
+
+        let arr = [4,3,5,7,9,8,5,23,35,54,6]
+
+        let res = arr.filter((value) => {
+            if(value % 2 == 0){
+                return true;
+            }
+            else{
+                return false;
+            }
+        })
+
+        console.log(res)
+
+    </script>
+</body>
+
+</html>

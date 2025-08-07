@@ -1,0 +1,13 @@
+
+let english = 90;
+let hindi = 80;
+let maths = 90;
+let social = 85;
+let science = 90;
+let sanskrit = 85;
+const total = 600;
+let multiply = 100;
+let percentage = (english + hindi + maths + social +
+    science + sanskrit
+)
+console.log(percentage / total * multiply)  

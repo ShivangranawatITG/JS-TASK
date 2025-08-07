@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://exfont.com/la-luxes-serif-w05-regular.font">
+    <style>
+        table {
+            text-align: center;
+            background-color: aliceblue;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            font-family: LaLuxesSerifW05-Regular;
+        }
+
+        .color {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="center">MARKSHEET</h1>
+    <table>
+        <tr>
+            <th colspan="5">MARKSHEET</th>
+        </tr>
+        <tr>
+            <th>Subjects</th>
+            <th>Total</th>
+            <th>Passing Marks</th>
+            <th>Obtained Marks</th>
+            <th>Remaks</th>
+        </tr>
+        <tr>
+            <td>HINDI</td>
+            <td>100</td>
+            <td>32</td>
+            <td id="hindi"></td>
+            <td class="color" id="remarks"></td>
+        </tr>
+        <tr>
+            <td>ENGLISH</td>
+            <td>50</td>
+            <td>18</td>
+            <td id="english"></td>
+            <td class="color" id="remarks1"></td>
+        </tr>
+        <tr>
+            <td>MATHS</td>
+            <td>100</td>
+            <td>39</td>
+            <td id="maths"></td>
+            <td class="color" id="remarks2"></td>
+        </tr>
+        <tr>
+            <td>SCIENCE</td>
+            <td>100</td>
+            <td>41</td>
+            <td id="science"></td>
+            <td class="color" id="remarks3"></td>
+        </tr>
+        <tr>
+            <td>SOCIAL SCIENCE</td>
+            <td>100</td>
+            <td>29</td>
+            <td id="socialScience"></td>
+            <td class="color" id="remarks4"></td>
+        </tr>
+        <tr>
+            <td>SANSKRIT</td>
+            <td>50</td>
+            <td>20</td>
+            <td id="sanskrit"></td>
+            <td class="color" id="remarks5"></td>
+        </tr>
+        <tr>
+            <td colspan="5" id="total"></td>
+        </tr>
+        <tr>
+            <td colspan="5" id="percent"></td>
+        </tr>
+    </table>
+
+
+
+
+    <script>
+
+
+        //         // want to make 10th marksheet
+
+        //  Subjects  -   total  - passing-marks - other
+        // // hindi  -       100 -    32 -      71 - dist /supply
+        // // english  -     50 -     18        35 -
+        // //maths -         100 -    39        85
+        // //science -       100 -    41        81
+        // //socialScience - 100 -    29        55
+        // //sanskrit -      50  -    20        30’
+
+        // Agar 2 main fail hai to supply
+        // Agar 3 or 3 se jyda me fail to fail
+        // Agar 40 se kam - 3rd division
+        // Agar 40 - 59.99 - second division
+        // Agar 60 - 75 - 1st division
+        // Agar 75 se jyda - A+ division
+
+        let count = 0
+
+        //Marks
+        const subject = {
+            hindi: +prompt("Hindi"),
+            english: +prompt("English"),
+            maths: +prompt("Maths"),
+            science: +prompt("Science"),
+            socialScience: +prompt("Social Science"),
+            sanskrit: +prompt("Sanskrit")
+        }
+
+        if (+prompt == "" || Number.isNaN(+prompt()) || +prompt > 100 || +prompt < 0) {
+            alert("please enter a valid number")
+        }
+
+        console.log(
+            "Subjects         -     total    -    passing-marks    -   obtained marks     -     dist /supply                                      \n",
+            "\n",
+            "hindi           -     100      -        32                  " + subject.hindi, "                    ", hindi(subject.hindi) + "\n",
+            "english         -     50       -        18                  " + subject.english, "                     ", english(subject.english) + "\n",
+            "maths           -     100      -        39                  " + subject.maths, "                    ", maths(subject.maths) + "\n",
+            "science         -     100      -        41                  " + subject.science, "                    ", science(subject.science) + "\n",
+            "socialScience   -     100      -        29                  " + subject.socialScience, "                    ", socialScience(subject.socialScience) + "\n",
+            "sanskrit        -     50       -        20                  " + subject.sanskrit, "                     ", sanskrit(subject.sanskrit) + "\n"
+        )
+
+
+
+        function hindi(n) {
+
+            if (subject.hindi < 32) {
+                count++
+                return "supplymentary!"
+            }
+            else if (subject.hindi >= 71 && subject.hindi < 101) {
+                return "#dist"
+            } else {
+
+                return ""
+            }
+
+        }
+        function english(n) {
+            if (subject.english < 18) {
+                count++
+                return "supplymentary!"
+            }
+            else if (subject.english >= 35 && subject.english < 51) {
+                return "#dist"
+            } else {
+
+                return ""
+            }
+
+        }
+        function maths(n) {
+            if (subject.maths < 39) {
+                count++
+                return "supplymentary!"
+            }
+            else if (subject.maths >= 85 && subject.maths < 101) {
+                return "#dist"
+            } else {
+
+                return ""
+            }
+
+        }
+        function science(n) {
+            if (subject.science < 41) {
+                count++
+                return "supplymentary!"
+            }
+            else if (subject.science >= 81 && subject.science < 101) {
+                return "#dist"
+            } else {
+
+                return ""
+            }
+
+        }
+        function socialScience(n) {
+            if (subject.socialScience < 29) {
+                count++
+                return "supplymentary!"
+            }
+            else if (subject.socialScience >= 55 && subject.socialScience < 101) {
+                return "#dist"
+            } else {
+
+                return ""
+            }
+
+        }
+        function sanskrit(n) {
+            if (subject.sanskrit < 20) {
+                count++
+                return "supplymentary!"
+            }
+            else if (subject.sanskrit >= 30 && subject.sanskrit < 51) {
+                return "#dist"
+            } else {
+
+                return ""
+            }
+
+        }
+
+        let grandtotal = subject.hindi + subject.english + subject.maths + subject.science + subject.socialScience + subject.sanskrit
+        console.log("Grand Total :", grandtotal, "/500")
+
+        let percentage = grandtotal / 500 * 100
+        console.log("Percentage :", percentage, "%")
+
+        //result
+        function result() {
+            if (percentage < 40) {
+                console.log("Passed in Third Division")
+            }
+            else if (percentage >= 40 && percentage <= 59.99) {
+                console.log("Passed in Second Division")
+            }
+            else if (percentage >= 60 && percentage < 75) {
+                console.log("Passed in First Division")
+            }
+            else {
+                console.log("Passed in A+ Division")
+            }
+        }
+
+        function supply() {
+            if (count > 0 && count <= 2) {
+                return "supply";
+            }
+            else if (count >= 3) {
+                return "fail";
+            }
+            else {
+                result()
+            }
+        }
+        let x = supply()
+        console.log(x)
+
+        // Obtained Marks
+        document.getElementById("hindi").innerText = subject.hindi
+        document.getElementById("english").innerText = subject.english
+        document.getElementById("maths").innerText = subject.maths
+        document.getElementById("science").innerText = subject.science
+        document.getElementById("socialScience").innerText = subject.socialScience
+        document.getElementById("sanskrit").innerText = subject.sanskrit
+
+        //Grade
+        document.getElementById("remarks").innerText = hindi(subject.hindi)
+        document.getElementById("remarks1").innerText = english(subject.english)
+        document.getElementById("remarks2").innerText = maths(subject.maths)
+        document.getElementById("remarks3").innerText = science(subject.science)
+        document.getElementById("remarks4").innerText = socialScience(subject.socialScience)
+        document.getElementById("remarks5").innerText = sanskrit(subject.sanskrit)
+
+        //Total
+        document.getElementById("total").innerText = "Grand Total :" + grandtotal + "/500"
+        document.getElementById("percent").innerText = "Percentage :" + percentage + "%"
+
+
+        if (subject.hindi > 100 || subject.english > 100 || subject.maths > 100 || subject.science > 100 || subject.socialScience > 100 || subject.sanskrit > 100 || subject.hindi < 0 || subject.english < 0 || subject.maths < 0 || subject.science < 0 || subject.socialScience < 0 || subject.sanskrit < 0) {
+            alert("Wrong Number agar aapne ye number daala to aapki calculation me problem aayegi")
+        }
+        else if (typeof subject.hindi == "string" || typeof subject.english == "string" || typeof subject.maths == "string" || typeof subject.science == "string" || typeof subject.socialScience == "string" || typeof subject.sanskrit == "string") {
+            alert("Error aapne string likhi hai isse aapki calculation me problem aayegi")
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="button" onclick="remove()">Click me</button>
+    <script>
+        //         4. Attribute Ko Remove Karna
+        // Description: removeAttribute() ka use karke ek button se disabled attribute hatao jab wo click ho.
+
+        let element = document.querySelector('.button')
+        function remove(){
+        element.removeAttribute('class')
+    }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //       🔶 Question 10: Electricity Bill Calculator
+        // Create an object with a user's name and unitsConsumed. Use the following conditions to calculate the bill:
+        // ₹5 per unit for up to 100 units
+
+
+        // ₹7 per unit for 101–300 units
+
+
+        // ₹10 per unit for above 300 units
+        //  Print a statement with the name and total bill amount.
+
+        const bill = {
+            username: "harry",
+            units_consumed: 300
+        }
+        let unit = bill.units_consumed
+        if (unit <= 100) {
+            let charge = 5 * unit
+            console.log(charge)
+        }
+        else if (unit >= 101 && unit <= 300) {
+            let charge = 7 * unit
+            console.log(charge)
+        }
+        else {
+            let charge = 10 * unit
+            console.log(charge)
+        }
+
+    </script>
+</body>
+
+</html>

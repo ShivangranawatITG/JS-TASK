@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div{
+            height: 100px;
+            width: 100px;
+            color : rgb(255, 208, 0);
+            background-color: blue;
+        } */
+
+        input{
+            border-radius: 999px;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container">
+        <ul class="navbar">
+            <li class="links">home</li>
+            <li>about</li>
+            <li>contact</li>
+        </ul> -->
+        <!-- <div class="container">
+            <h2>Raghavi</h2>
+        </div>
+        <button class="bu" onclick="darkmode()">click me</button> -->
+        <h1 class="n">login</h1>
+        <input type="text">
+        <input type="text">
+        <input class="di" type="text">
+        <input class="di" type="text">
+        <input class="di" type="text">
+        <input class="di" type="text">
+        <input class="di" type="text">
+        <input class="di" type="text">
+        <button onclick="login()">login</button>
+        <button onclick="sign()">sign up</button>
+
+    </div>
+    <script>
+        // let container = document.querySelector('.container')
+        // let nav = document.querySelector('.navbar')
+        // let link = document.querySelector('.links')
+        // // console.log(container.innerHTML)
+        // // console.log(nav.innerHTML)
+
+        // // container.innerHTML = '<h1>Raghavi is a girl.</h1>'
+        // // console.log(container.innerHTML)
+
+        // container.getAttribute('class')
+        // console.log(container)
+
+        // nav.setAttribute('class','small')
+        // console.log(nav)
+
+        // let c = nav.hasAttribute('class')
+        // console.log(c)
+        
+        // link.removeAttribute('class')
+        // console.log(link)
+
+        // let container = document.querySelector('.container')
+        // let button = document.querySelector('.bu')
+
+        // function darkmode(){
+        //     container.style.background = 'black'
+        //     container.style.height = '200px'
+        //     container.style.width = '200px'
+        //     button.style.background = 'black'
+        //     button.style.color = 'white'
+        //     container.setAttribute('class','active')
+        // }
+
+        let input = document.querySelectorAll('.di')
+        let head = document.getElementsByClassName('.n')
+        
+        function login(){
+            input[0].style.display = 'none'
+            input[1].style.display = 'none'
+            input[2].style.display = 'none'
+            input[3].style.display = 'none'
+            input[4].style.display = 'none'
+            input[5].style.display = 'none'
+        }
+        function sign(){
+            input[0].style.display = 'inline'
+            input[1].style.display = 'inline'
+            input[2].style.display = 'inline'
+            input[3].style.display = 'inline'
+            input[4].style.display = 'inline'
+            head.innerHTML  = 'Signup'
+        }
+
+    </script>
+</body>
+
+</html>

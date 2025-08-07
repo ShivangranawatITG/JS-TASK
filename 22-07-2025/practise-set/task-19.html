@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 19. Get even numbers and print each one
+        // Even numbers ko filter karo aur unhe console pe print karo.
+        // Input: [1, 2, 3, 4] => Output: console.log 2, 4
+
+        let arr = [3,54,4,2,8,6,3,5,7,9]
+
+        let res = arr.filter((value) => {
+            if(value % 2 == 0){
+                return true;
+            }
+            else{
+                return false;
+            }
+        })
+
+        console.log(res)
+
+    </script>
+</body>
+
+</html>

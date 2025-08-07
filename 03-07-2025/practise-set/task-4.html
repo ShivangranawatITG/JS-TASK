@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Q-4 Create an object called `classroom`
+        // It should have a property `students` that is an array of 3 student objects
+        // Each student object should have:
+        // -name, hobbies (an array of 3 hobbies), city
+        // Print the second hobby of the third student
+
+        const classroom = {
+            students: [
+                {
+                    name: "harry",
+                    hobby: ["dancing", "singing", "reading"],
+                    city: "indore"
+                },
+                {
+                    name: "dev",
+                    hobby: ["cricket", "gaming", "driving"],
+                    city: "dewas"
+
+                },
+                {
+                    name: "kartik",
+                    hobby: ["basketball", "football", "listening"],
+                    city: "banglore"
+                }
+            ]
+        }
+
+        console.log(classroom.students[2].hobby[1])
+
+    </script>
+</body>
+
+</html>

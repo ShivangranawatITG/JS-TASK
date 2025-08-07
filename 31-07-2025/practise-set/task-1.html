@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <img class="image" src="31-07-2025/bike.webp" alt="bike"> -->
+    <img class="img"
+        src="https://preview.redd.it/is-the-gt650-worth-it-today-v0-tytj3zlyaf3e1.jpeg?width=640&crop=smart&auto=webp&s=5085edaa61c6b32ae969c0cbe4926dc41baf5ca0"
+        alt="bike" width="750px" height="550px">
+    <button onclick="path_change()">Click me</button>
+    <script>
+        //         1:image ka src Change Karna
+        // Description: setAttribute() ka use kar ke ek image ke src attribute ko change karo kisi specific id wale element ke liye.
+
+
+        // Example: Button click par image ka source naya URL set karo.
+
+        let element = document.querySelector('.img')
+        function path_change() {
+            if (element.getAttribute('src') == 'https://preview.redd.it/is-the-gt650-worth-it-today-v0-tytj3zlyaf3e1.jpeg?width=640&crop=smart&auto=webp&s=5085edaa61c6b32ae969c0cbe4926dc41baf5ca0') {
+                element.setAttribute('src', 'https://ssmotocorp.com/cdn/shop/files/IMG-20240110-WA0035.jpg?v=1705742009&width=1946')
+            }
+            else if (element.getAttribute('src') == 'https://ssmotocorp.com/cdn/shop/files/IMG-20240110-WA0035.jpg?v=1705742009&width=1946') {
+                element.setAttribute('src', 'https://www.motoroids.com/wp-content/uploads/2020/08/Modified-Maruit-Omni-1-1200x800.jpg')
+            }
+            else {
+                element.setAttribute('src','https://preview.redd.it/is-the-gt650-worth-it-today-v0-tytj3zlyaf3e1.jpeg?width=640&crop=smart&auto=webp&s=5085edaa61c6b32ae969c0cbe4926dc41baf5ca0')
+            }
+        }
+
+    </script>
+</body>
+
+</html>

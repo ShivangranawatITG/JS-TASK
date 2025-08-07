@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="change(0)">click here</button>
+    <button onclick="change(1)">click here</button>
+    <button onclick="change(2)">click here</button>
+    <button onclick="change(3)">click here</button>
+    <button onclick="change(4)">click here</button>
+    <script>
+        // Ek page banao jisme 5 buttons ho (Button 1 to 5). Jab user kisi bhi button par click kare,
+        //  us button ka text "Clicked!" ho jaye aur background color green ho jaye 
+        // — sirf usi button ka.
+
+        let element = document.getElementsByTagName('button')
+        function change(x) {
+            element[x].innerHTML = 'Clicked!'
+            element[x].style.background = 'green'
+        }
+
+    </script>
+</body>
+
+</html>

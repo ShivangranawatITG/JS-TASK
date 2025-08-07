@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+//         Q - 1 Create 3 objects.Each object should have these properties:
+//         name, age, salary, education
+
+// Then calculate and print:
+//         1. The average age of all 3 people
+//         2. The total salary of all 3 people
+
+
+        const harry = {
+            name: 'harry',
+            age: 20,
+            salary: 5000,
+            education: '12th pass'
+        }
+        const dany = {
+            name: 'dany',
+            age: 18,
+            salary: 4000,
+            education: '10th pass'
+        }
+        const dev = {
+            name: 'dev',
+            age: 22,
+            salary: 10000,
+            education: 'b tech'
+        }
+        let average_age = (harry.age + dany.age + dev.age) / 3
+        console.log(average_age)
+        let totalsalary = harry.salary + dany.salary + dev.salary
+        console.log(totalsalary)
+
+    </script>
+</body>
+
+</html>

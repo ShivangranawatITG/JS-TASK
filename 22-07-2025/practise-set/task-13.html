@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 13. Remove falsy values
+        // Array mein se saare falsy values (false, 0, '', null, undefined, NaN) ko hatao.
+        // Input: [0, 1, false, 'hello', null] => Output: [1, 'hello']
+
+        let arr = [0, 1, false, 'hello', null]
+
+        let res = arr.filter((value) => {
+            if(value !== null || value !== 0 || value !== "" || value !== false || value !== undefined || value !== NaN){
+                return true;
+            }
+            else{
+                return false;
+            }
+        })
+
+        console.log(res)
+
+    </script>
+</body>
+
+</html>

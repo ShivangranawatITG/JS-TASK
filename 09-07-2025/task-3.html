@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //         ✅ Question 3: Find the First String in an Array
+        // You are given an array with mixed data types.
+        //  Use a while loop to find and print the first element that is a string.
+        //  Stop the loop once the first string is found.
+
+        const collection = [235623, true, 98940029820n, null, "raghav"]
+
+        let i = 0;
+        while (i < collection.length) {
+            if (typeof collection[i] === "string") {
+                console.log(collection[i]);
+                break;
+            }
+            i++;
+        }
+
+
+    </script>
+</body>
+
+</html>
