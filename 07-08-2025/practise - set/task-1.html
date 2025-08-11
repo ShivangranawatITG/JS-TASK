@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="button" onclick="change()">Hello World!</button>
+    <script>
+        //         Button Click pe Text Change karo
+        //  Ek button banao, jise click karne pe ek paragraph ka text "Hello World!" se
+        //         "Button Clicked!" ho jaye.
+
+        let button = document.getElementById('button')
+
+        function change(){
+            button.innerText =  "Button Clicked!"
+        }
+        
+
+    </script>
+</body>
+
+</html>

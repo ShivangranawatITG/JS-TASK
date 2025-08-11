@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 500px;
+            height: 400px;
+            border: 2px solid black;
+            position: relative;
+        }
+
+        #circle {
+            display: none;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 99px;
+            background-color: red;
+            margin-top: 40px;
+            margin-left: 50px;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #button {
+            padding: 15px;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🎯Click the Circle Game🎯</h1>
+    <button id="button" onclick="timer()">START GAME</button>
+    <p id="score">SCORE : 0</p>
+    <p id="timing">Time left : 30</p>
+    <div id="box">
+        <div onclick="cllick()" id="circle"></div>
+    </div>
+
+    <script>
+
+        let time = document.getElementById('timing')
+        let score = document.getElementById('score')
+        const box = document.getElementById('box')
+        const circle = document.getElementById('circle')
+        let counting = 0
+        function timer() {
+            let count = 30
+            counting = 0
+            const sec = setInterval(() => {
+                time.innerText = `Time left : ${count--}`
+            }, 1000);
+            setTimeout(() => {
+                clearInterval(sec)
+            }, 30000);
+            circle.style.display = 'block'
+            button.setAttribute('disabled', 'true')
+            const round = setInterval(() => {
+                circle.style.top = `${random(0, 300)}px`
+                circle.style.left = `${random(0, 400)}px`
+            }, 1000);
+            setTimeout(() => {
+                clearInterval(round)
+                circle.style.display = 'none'
+                button.removeAttribute('disabled')
+                alert('Game over! your score is :' + counting)
+                score.innerText = '0'
+            }, 30000);
+        }
+
+
+        function cllick() {
+            counting++
+            score.innerText = `SCORE : ${counting}`
+        }
+
+
+        function random(min, max) {
+            let random = Math.random()
+            let number = Math.floor(random * (max - min) + min)
+            return number
+        }
+    </script>
+</body>
+
+</html>

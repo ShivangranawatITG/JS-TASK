@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://exfont.com/la-luxes-serif-w05-regular.font">
+    <title>Document</title>
+    <style>
+        .watch {
+            background-color: rgb(52, 238, 213);
+            width: 400px;
+            height: 400px;
+            border-radius: 500px;
+            margin: auto;
+        }
+
+        h1 {
+            margin: auto 44%;
+            color: rgb(52, 238, 213);
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #000;
+            gap: 20px;
+            font-family: LaLuxesSerifW05-Regular;
+            margin-top: 5%;
+        }
+
+        button {
+            margin: 30% 4%;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #000;
+            font-family: LaLuxesSerifW05-Regular;
+            color: white;
+            border: 1px solid rgb(52, 238, 213);
+            color: rgb(52, 238, 213);
+        }
+
+        .para {
+            margin-top: 20%;
+            display: flex;
+            gap: 20px;
+            color: #000;
+            font-size: 77px;
+        }
+
+        #start {
+            margin-left: 35px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>STOPWATCH</h1>
+    <div class="watch">
+        <div class="para">
+            <p id="hour">00:</p>
+            <p id="minute">00:</p>
+            <p id="second">00</p>
+        </div>
+        <button id="start" onclick="watch()">START</button>
+        <button id="stop" onclick="stop()">STOP</button>
+        <button id="reset" onclick="reset()">RESET</button>
+    </div>
+
+    <script>
+
+        let second = document.getElementById('second')
+        let START = document.getElementById('start')
+        let STOP = document.getElementById('stop')
+        let RESET = document.getElementById('reset')
+
+        let time;
+        let x = 0
+        let y = 0
+        let z = 0
+        function watch() {
+            START.disabled = true
+            time = setInterval(() => {
+                x++
+                second.innerText = String(x).padStart(2, 0)
+                if (x == 60) {
+                    x = 0
+                    y++
+                    minute.innerText = String(y).padStart(2, "0") + ':'
+                }
+                if (y == 60) {
+                    y = 0
+                    z++
+                    hour.innerText = String(z).padStart(2, "0") + ':'
+                }
+                if (z == 12) {
+                    z = 0
+                }
+
+
+            }, 1000);
+        }
+
+        function stop() {
+            START.disabled = false
+            clearInterval(time)
+        }
+
+        function reset() {
+            clearInterval(time)
+            START.disabled = false
+            hour.innerText = '00:'
+            minute.innerText = '00:'
+            second.innerText = '00'
+            x = 0
+            y = 0
+            z = 0
+        }
+
+        document.addEventListener("keydown", function (event) {
+            if (event.keyCode == 83) {
+                START.click()
+            }
+            if (event.keyCode == 84) {
+                STOP.click()
+            }
+            if (event.keyCode == 82) {
+                RESET.click()
+            }
+        });
+
+    </script>
+</body>
+
+</html>
